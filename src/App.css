@@ -153,9 +153,6 @@ form .button input:hover {
   form .gender-details {
     transform: translate(0px, 27px);
   }
-  .user-details::-webkit-scrollbar {
-    width: 5px;
-  }
 }
 @media (max-width: 459px) {
   .container .content .category {
