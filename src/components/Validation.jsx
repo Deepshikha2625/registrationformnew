@@ -12,6 +12,7 @@ export default function Validation(AllValidation) {
     gender: "",
   });
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setValues({
@@ -21,7 +22,9 @@ export default function Validation(AllValidation) {
   };
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     setErrors(AllValidation(values));
+    setIsSubmitting(true);
   };
   return { handleChange, values, handleSubmit, errors };
 }

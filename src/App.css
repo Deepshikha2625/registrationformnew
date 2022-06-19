@@ -26,6 +26,7 @@ fieldset {
   font-weight: 500;
   position: relative;
   margin-left: 15px;
+  top: 30px;
 }
 .container .title::before {
   content: "";
@@ -41,7 +42,7 @@ fieldset {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 20px 20px 12px 0;
+  margin: 40px 40px 20px 0;
 }
 form .user-details .input-box {
   margin-bottom: 15px;
@@ -131,7 +132,10 @@ form .button input:hover {
 @media (max-width: 584px) {
   .container {
     max-width: 100%;
-    margin: -10px;
+    transform: translate(0, 44px);
+  }
+  .container .title {
+    font-size: 20px;
   }
   .user-details .input-box input {
     width: 94%;
@@ -144,8 +148,10 @@ form .button input:hover {
     width: 100%;
   }
   .content form .user-details {
-    max-height: 300px;
-    overflow-y: scroll;
+    max-height: 500px;
+  }
+  form .gender-details {
+    transform: translate(0px, 27px);
   }
   .user-details::-webkit-scrollbar {
     width: 5px;
